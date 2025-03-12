@@ -1,2 +1,2 @@
-install-vim:
+install-homebrew:
 	brew bundle --file Brewfile
