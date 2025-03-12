@@ -1,0 +1,29 @@
+# alias
+export LSCOLORS=cxfxcxdxbxegedabagacad
+alias today_iso='date "+%Y-%m-%d"'
+alias ll='ls -lG'
+alias ls='ls -G'
+alias v='nvim'
+alias nv='nvim'
+
+# Obsidian alias
+if [[ -n "$DAILYNOTE_DIR" ]]; then
+    alias d='nvim "$DAILYNOTE_DIR/$(date +%Y-%m-%d).md"'
+fi
+if [[ -n "$OBSIDIAN_DIR" ]]; then
+    alias od='cd "$OBSIDIAN_DIR"'
+fi
+
+# starship
+eval "$(starship init zsh)"
+
+# zsh plugin
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
