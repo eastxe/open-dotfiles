@@ -1,0 +1,7 @@
+# デバイスごとの設定を読み込む（存在すれば）
+if [ -f "$HOME/.zsh_local.zsh" ]; then
+    source "$HOME/.zsh_local.zsh"
+fi
+
+# 共通の設定を読み込む
+source "$HOME/.zsh_common.zsh"
