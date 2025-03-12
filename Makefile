@@ -1,3 +1,2 @@
-install-homebrew:
-	rm -rf ~/.Brewfile
-	ln -s `pwd`/Brewfile/Brewfile ~/.Brewfile
+install-vim:
+	brew bundle --file Brewfile
